@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cocoapods/github_token_http_rewriter/version'
+require 'pod/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "cocoapods-github_token_http_rewriter"
-  spec.version       = Cocoapods::GithubTokenHttpRewriter::VERSION
+  spec.version       = Pod::GitSourceURLRewriter::VERSION
   spec.authors       = ["Brian Michel"]
   spec.email         = ["brian@tumblr.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
