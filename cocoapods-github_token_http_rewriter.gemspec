@@ -5,11 +5,10 @@ require 'pod/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "cocoapods-github_token_http_rewriter"
-  spec.version       = Pod::GitSourceURLRewriter::VERSION
+  spec.version       = SourceURLRewriter::VERSION
   spec.authors       = ["Brian Michel"]
   spec.email         = ["brian@tumblr.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{A thing to rewrite pod source urls with a forced token.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
