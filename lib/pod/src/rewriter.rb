@@ -1,4 +1,5 @@
 module SourceURLRewriter
+  # Url rewriter
   class Rewriter
     # Create a new rewriter with a context and config
     def initialize(context, config)

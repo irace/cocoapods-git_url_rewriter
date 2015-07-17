@@ -1,4 +1,5 @@
 module SourceURLRewriter
+  # Configuration information
   class Configuration
     # The token to append into the URL
     attr_reader :token
@@ -8,6 +9,7 @@ module SourceURLRewriter
     def initialize(installer_context)
       # Pull configuration info out of context
       # Find token and path urls
+      @context = installer_context
     end
   end
 end
