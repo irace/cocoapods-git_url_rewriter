@@ -1,5 +1,4 @@
 require 'cocoapods'
-require 'pod/src/configuration'
 require 'pod/src/rewriter'
 
 module Pod
