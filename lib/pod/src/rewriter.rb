@@ -8,19 +8,14 @@ module SourceURLRewriter
     end
 
     def rewrite!
-      specs.each do |spec|
-        next if spec.source.nil? || spec.source[:git].nil?
-
-        source_url = spec.source[:git]
-
-        Pod::UserInterface.warn("> Found Git Source URL #{source_url}")
+      deps.each do |deps|
       end
     end
 
     private
 
-    def specs
-      @specs ||= @context.umbrella_targets.map(&:specs).flatten.uniq
+    def deps
+      @deps ||= @context.podfile.dependencies
     end
   end
 end
