@@ -1,5 +1,4 @@
 require 'cocoapods'
-require 'pod/src/configuration'
 require 'pod/src/rewriter'
 
 module Pod
@@ -7,7 +6,6 @@ module Pod
     # Reopening the Git downloader class
     class Git
       alias_method :github_token_http_rewriter_url, :url
-      # FIXME: This needs to be better encapsulated
       def url
         source_url_rewriter.url_for(github_token_http_rewriter_url)
       end
