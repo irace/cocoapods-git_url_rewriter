@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cocoapods-git_url_rewriter (0.0.1)
+    cocoapods-git_url_rewriter (1.0.0)
 
 GEM
   remote: https://rubygems.org/
