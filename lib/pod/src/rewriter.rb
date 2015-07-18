@@ -11,11 +11,11 @@ module SourceURLRewriter
 
         if transformed_key
           rewritten_url = url.sub(transformed_key, user_options[transformed_key])
-          Pod::UI.info('Transforming URL #{url}} into #{rewritten_url}')
+          Pod::UI.info("Transforming URL #{url} into #{rewritten_url}")
           return rewritten_url
         end
       else
-        Pods::UI.notice('No options have been specified for rewriting.')
+        Pod::UI.notice('No options have been specified for rewriting.')
       end
 
       url
@@ -30,8 +30,8 @@ module SourceURLRewriter
     end
 
     def user_options
-      @options ||= podfile.plugins['cocoapods-github_token_http_rewriter']
-      Pods::UI.notice('No options have been specified for rewriting') unless @options
+      @options ||= podfile.plugins['cocoapods-git_url_rewriter']
+      Pod::UI.notice('No options have been specified for rewriting') unless @options
       @options
     end
 

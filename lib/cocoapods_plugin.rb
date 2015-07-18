@@ -5,9 +5,9 @@ module Pod
   module Downloader
     # Reopening the Git downloader class
     class Git
-      alias_method :github_token_http_rewriter_url, :url
+      alias_method :git_url_rewriter_url, :url
       def url
-        source_url_rewriter.url_for(github_token_http_rewriter_url)
+        source_url_rewriter.url_for(git_url_rewriter_url)
       end
 
       def source_url_rewriter

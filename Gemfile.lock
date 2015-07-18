@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cocoapods-github_token_http_rewriter (0.0.1)
+    cocoapods-git_url_rewriter (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -81,7 +81,7 @@ DEPENDENCIES
   bacon
   bundler (~> 1.7)
   cocoapods
-  cocoapods-github_token_http_rewriter!
+  cocoapods-git_url_rewriter!
   mocha-on-bacon
   rake (~> 10.0)
   rubocop
