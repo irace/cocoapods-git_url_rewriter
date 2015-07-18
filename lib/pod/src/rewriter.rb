@@ -5,34 +5,38 @@ module SourceURLRewriter
   #   "pattern" => "replacement"
   # }
   class Rewriter
-    def url_for(url) 
-      options = user_options
-      if options 
-        first_matching_transform_key = options.keys.select {|key| url.start_with?(key)}.first 
+    def url_for(url)
+      if user_options
+        transformed_key = transform_key(url)
 
-        if first_matching_transform_key
-          rewritten_url = url.sub(first_matching_transform_key, options[first_matching_transform_key])
-          Pod::UI.info("Transforming download URL #{url}} into #{rewritten_url}")
+        if transformed_key
+          rewritten_url = url.sub(transformed_key, user_options[transformed_key])
+          Pod::UI.info('Transforming URL #{url}} into #{rewritten_url}')
           return rewritten_url
         end
       else
-        Pods::UI.notice("No options have been specified for rewriting, every url will pass through.")
+        Pods::UI.notice('No options have been specified for rewriting.')
       end
 
-      Pod::UI.info("No patterned matched, passing #{url} through")
-      return url
+      url
     end
 
     private
 
+    def transform_key(url)
+      user_options.keys.find do |key|
+        url.start_with?(key)
+      end
+    end
+
     def user_options
-      options = podfile.plugins['cocoapods-github_token_http_rewriter']
-      options
+      @options ||= podfile.plugins['cocoapods-github_token_http_rewriter']
+      Pods::UI.notice('No options have been specified for rewriting') unless @options
+      @options
     end
 
     def podfile
       Pod::Config.instance.podfile
     end
-
   end
 end
