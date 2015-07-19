@@ -7,7 +7,9 @@ A simple gem that will allow the rewriting of Cocoapods git dependency URLs just
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'cocoapods-git_url_rewriter'
+source 'https://tumblrgems.ewr01.tumblr.net' do
+  gem 'cocoapods-git_url_rewriter', '1.0.0'
+end
 ```
 
 And then execute:
