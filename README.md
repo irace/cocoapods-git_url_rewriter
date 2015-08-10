@@ -6,11 +6,7 @@ A simple gem that will allow the rewriting of Cocoapods git dependency URLs just
 
 Add this line to your application's Gemfile:
 
-```ruby
-source 'https://tumblrgems.ewr01.tumblr.net' do
-  gem 'cocoapods-git_url_rewriter', '1.0.0'
-end
-```
+gem 'cocoapods-git_url_rewriter', '1.0.0'
 
 And then execute:
 
@@ -34,13 +30,13 @@ A more concrete example would be as follows
 
 ```ruby
 plugin 'cocoapods-git_url_rewriter', {
-    'git@git.corp.yahoo.com:' => 'https://sekrittoken@git.corp.yahoo.com/'
+    'git@git.my-cool-company.com:' => 'https://sekrittoken@my-cool-company.com/'
 }
 ```
 
 ## Contributing
 
-1. Fork it ( https://github.ewr01.tumblr.net/brian/cocoapods-git_url_rewriter/fork )
+1. Fork it ( https://github.com/brianmichel/cocoapods-git_url_rewriter/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

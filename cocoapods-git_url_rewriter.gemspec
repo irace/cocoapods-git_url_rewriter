@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = 'cocoapods-git_url_rewriter'
   spec.version       = SourceURLRewriter::VERSION
   spec.authors       = ['Brian Michel']
-  spec.email         = ['brian@tumblr.com']
+  spec.email         = ['brian.michel@gmail.com']
   spec.summary       = 'Used to rewrite git source urls before they are downloaded.'
-  spec.homepage      = 'https://github.ewr01.tumblr.net/brian/cocoapods-git_url_rewriter'
+  spec.homepage      = 'https://github.com/brianmichel/cocoapods-git_url_rewriter'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
