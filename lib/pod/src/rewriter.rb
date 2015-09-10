@@ -30,9 +30,11 @@ module SourceURLRewriter
     end
 
     def user_options
-      @options ||= podfile.plugins['cocoapods-git_url_rewriter']
-      Pod::UI.notice('No options have been specified for rewriting') unless @options
-      @options
+      if podfile.nil?
+        @options ||= podfile.plugins['cocoapods-git_url_rewriter']
+        Pod::UI.notice('No options have been specified for rewriting') unless @options
+        @options
+      end
     end
 
     def podfile
